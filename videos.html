@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎥 Video Gallery | Class 10 Memories</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/neon.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="background-slideshow"></div>
+
+<header>
+
+<h1>🎥 Video Memories</h1>
+<p>✨ Relive the best moments of our school life ✨</p>
+
+<nav>
+<ul>
+
+<li><a href="index.html">🏠 Home</a></li>
+<li><a href="gallery.html">📸 Gallery</a></li>
+<li><a class="active" href="videos.html">🎥 Videos</a></li>
+<li><a href="classmates.html">👨‍🎓 Classmates</a></li>
+<li><a href="memory.html">💬 Memory Wall</a></li>
+<li><a href="timeline.html">⏳ Timeline</a></li>
+
+</ul>
+</nav>
+
+</header>
+
+
+
+<!-- VIDEO CATEGORY FILTER -->
+
+<div class="gallery-filter">
+
+<button onclick="filterVideos('all')">✨ All</button>
+
+<button onclick="filterVideos('gang')">😎 Gang</button>
+
+<button onclick="filterVideos('farewell')">🎓 Farewell</button>
+
+<button onclick="filterVideos('random')">🎬 Random</button>
+
+</div>
+
+
+
+<!-- GANG VIDEOS -->
+
+<section class="video-section gang">
+
+<h2>😎 School Gang</h2>
+
+<div class="video-container">
+
+<video controls>
+<source src="videos/School-gang.mp4" type="video/mp4">
+</video>
+
+<video controls>
+<source src="videos/lv_0_20251018162741.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</section>
+
+
+
+<!-- FAREWELL VIDEO -->
+
+<section class="video-section farewell">
+
+<h2>🎓 Farewell Memories</h2>
+
+<div class="video-container">
+
+<video controls>
+<source src="videos/Farewell.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</section>
+
+
+
+<!-- RANDOM VIDEO -->
+
+<section class="video-section random">
+
+<h2>🎬 Random School Moments</h2>
+
+<div class="video-container">
+
+<video controls>
+<source src="videos/Xth-gang.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>✨ Class 10 Batch 2025-2026 Memory Archive ✨</p>
+
+</footer>
+
+
+
+
+
+<script src="js/script.js"></script>
+
+<script>
+
+/* VIDEO FILTER */
+
+function filterVideos(category){
+
+let sections=document.querySelectorAll(".video-section")
+
+sections.forEach(section=>{
+
+if(category==="all"){
+
+section.style.display="block"
+
+}
+
+else if(section.classList.contains(category)){
+
+section.style.display="block"
+
+}
+
+else{
+
+section.style.display="none"
+
+}
+
+})
+
+}
+
+</script>
+
+</body>
+
+</html>
